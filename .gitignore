@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+pgdata
+pgdata/*
+chromedriver.exe
+test.ipynb
+web_crawling.ipynb

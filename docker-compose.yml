@@ -1,0 +1,33 @@
+version: '3.0'
+services:
+  db:
+    image: postgres
+    container_name: db
+    restart: always
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=local
+    networks:
+      - postgre-net
+
+  db_web_ui:
+    image: dpage/pgadmin4
+    container_name: pgadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=local@local.com
+      - PGADMIN_DEFAULT_PASSWORD=local
+    depends_on:
+      - db
+    networks:
+      - postgre-net
+
+networks:
+  postgre-net:
+    driver: bridge
