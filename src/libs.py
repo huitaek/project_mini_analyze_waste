@@ -1,6 +1,5 @@
 from os.path import join
 from os import getcwd
-from typing import Optional
 
 file_root_dir = join(getcwd(),'..\\files')
 
