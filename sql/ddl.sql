@@ -88,3 +88,13 @@ create table waste_process_subject_status(
     cremation float,
     recycled float
 );
+create table nationwide_recycle_center(
+    cnterNm varchar(100),
+    rdnmadr varchar(120),
+    latitude float,
+    longitude float,
+    ar float,
+    carHoldCo int,
+    trtmntPrdlst varchar(150),
+    institutionNm varchar(100)
+);

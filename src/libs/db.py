@@ -59,3 +59,9 @@ waste_process_subject_status={
     'table_name':'waste_process_subject_status',
     'columns':'(yr,subj,region,landfill,cremation,recycled)'
 }
+
+nationwide_recycle_center = {
+    'file_name':'api3.csv',
+    'table_name':'nationwide_recycle_center',
+    'columns':'(cnterNm,rdnmadr,latitude,longitude,ar,carHoldCo,trtmntPrdlst,institutionNm)'
+}
