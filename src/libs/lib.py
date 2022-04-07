@@ -1,6 +1,7 @@
 from os.path import join,dirname,abspath
 import platform
 import matplotlib.pyplot as plt
+import pandas as pd
 
 file_root_dir = join(dirname(abspath(__file__)),'..\\..\\files')
 
@@ -21,3 +22,23 @@ def set_korean():
 
     # 음수(-)가 깨지는 현상 방지
     plt.rcParams['axes.unicode_minus'] = False 
+    
+def get_insert_query(desc):
+    try:
+        df = pd.read_csv(get_file_dir('refined',desc['file_name']))
+    except Exception as e:
+        df = pd.read_csv(get_file_dir('refined',desc['file_name']),encoding='euc-kr')
+    query_list = []
+        
+    for i in df.values:
+        query = []
+        for d in i:
+            if isinstance(d,str):
+                query.append('\'{}\''.format(d))
+            else:
+                query.append('{}'.format(d))
+        query_list.append(','.join(query))
+
+    query_list = ','.join(list(map(lambda x:'({})'.format(x), query_list)))
+    return 'insert into {}{} values {}'.format(desc['table_name'],desc['columns'],query_list)
+    
