@@ -24,15 +24,15 @@ life_waste_per_population = {
 }
 # 지방자치단체_폐기물_처리시설_현황_매립시설(10-19).csv
 municipality_waste_facility_landfill = {
-    'file_name':'지방자치단체_폐기물_처리시설_현황_매립시설(10-19).csv',
+    'file_name':'지방자치단체_폐기물_처리시설_현황_매립시설(10-19)_설치비통합.csv',
     'table_name':'municipality_waste_facility_landfill',
-    'columns':'()'
+    'columns':'(region,landfill_cnt,total_area,total_landfill_capacity,landfill,landfill_rest,landfill_area,landfill_amount,maintenance_yr,manager_cnt,yr,install_cost)'
 }
 # 지방자치단체_폐기물_처리시설_현황_소각시설(10-19).csv
 municipality_waste_facility_cremation = {
-    'file_name':'지방자치단체_폐기물_처리시설_현황_소각시설(10-19).csv',
+    'file_name':'지방자치단체_폐기물_처리시설_현황_소각시설(10-19)_설치비통합.csv',
     'table_name':'municipality_waste_facility_landfill',
-    'columns':'()'
+    'columns':'(region,facility_cnt,capacity_daily,avg_working_daily,cremation_amount,maintenance_yr,manager_cnt,thermal_supply,electric_supply,own_use_thermal,own_use_electric,yr,install_cost)'
 }
 # 폐기물 재활용률(09-18).csv
 waste_recycle_ratio = {
