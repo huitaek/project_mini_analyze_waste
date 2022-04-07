@@ -1,5 +1,5 @@
 from os.path import join,dirname,abspath
-file_root_dir = join(dirname(abspath(__file__)),'..\\files')
+file_root_dir = join(dirname(abspath(__file__)),'..\\..\\files')
 
 def get_file_dir(dir_name:str,f_name:str=''):
     if dir_name == 'data':
