@@ -1,15 +1,3 @@
-create table recycle_corp_state(
-    region varchar(20),
-    year varchar(4),
-    waste_category varchar(50),
-    classification varchar(30),
-    corp_activated integer,
-    amount_recycled_waste integer,
-    sales integer,
-    total_sales integer
-);
-
-
 # 인구수_군구별(11-22)
 create table population_gungu_month (
     gungu   varchar(100),
