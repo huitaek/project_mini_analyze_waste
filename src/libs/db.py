@@ -65,3 +65,8 @@ nationwide_recycle_center = {
     'table_name':'nationwide_recycle_center',
     'columns':'(center_name,adrs,lat,long,area,car_hold,subject_treat,management_corp)'
 }
+income = {
+    'file_name':'income_refined.csv',
+    'table_name':'income',
+    'columns':'(category,region,yr,income)'
+}

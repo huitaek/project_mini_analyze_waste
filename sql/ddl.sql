@@ -98,3 +98,10 @@ create table nationwide_recycle_center(
     subject_treat varchar(150),
     management_corp varchar(100)
 );
+
+create table income(
+    category varchar(25),
+    region varchar(20),
+    yr int,
+    income int
+);
