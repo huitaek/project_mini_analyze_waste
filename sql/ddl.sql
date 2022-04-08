@@ -1,24 +1,24 @@
 create table population_gu_month (
-    gungu   varchar(30),
+    district   varchar(30),
     dt    date,
     pop int  
 );
 create table population_do_month (
-    sido   varchar(25),
+    region   varchar(25),
     dt    date,
     pop int   
 );
 create table normal_waste_recycle_ratio (
-    sido    varchar(25),
-    sigungu varchar(30),
+    region    varchar(25),
+    district varchar(30),
     yr    int,
     recycle_ratio   float,
     total_recycle   float,
     total_waste    float
 );
 create table life_waste_per_population(
+    region varchar(25),
     district varchar(30),
-    sub_district varchar(25),
     yr int,
     life_waste_per_pop float,
     life_waste float,
@@ -29,10 +29,10 @@ create table municipality_waste_facility_landfill(
     landfill_cnt int,
     total_area int,
     total_landfill_capacity int,
-    landfill int,
-    landfill_rest int,
-    landfill_area int,
-    landfill_amount int,
+    reclaimed int,
+    landfill_spare int,
+    reclaimed_area int,
+    reclaimed_amount int,
     maintenance_yr int,
     manager_cnt int,
     yr int,
@@ -48,18 +48,18 @@ create table municipality_waste_facility_cremation(
     manager_cnt int,
     thermal_supply int,
     electric_supply int,
-    own_use_thermal int,
-    own_use_electric int,
+    thermal_own_use int,
+    electric_own_use int,
     yr int,
     install_cost int
 );
 create table waste_recycle_ratio(
-    region varchar(20), 
-    district varchar(25),
-    category varchar(30),
+    region varchar(25), 
+    district varchar(30),
+    category varchar(35),
     yr int,
-    amount_per_day float,
-    recycled_per_day float
+    amount_daily float,
+    recycled_daily float
 );
 create table recycle_corp_state(
     region varchar(20),
@@ -67,8 +67,8 @@ create table recycle_corp_state(
     waste_category varchar(50),
     classification varchar(30),
     corp_activated integer,
-    amount_recycled_waste integer,
-    sales integer,
+    recycled_waste integer,
+    sales_amount integer,
     total_sales integer
 );
 create table life_waste_occurence_status(
@@ -84,17 +84,17 @@ create table waste_process_subject_status(
     yr int,
     subj varchar(16),
     region varchar(20),
-    landfill float,
+    reclaimed float,
     cremation float,
     recycled float
 );
 create table nationwide_recycle_center(
-    cnterNm varchar(100),
-    rdnmadr varchar(120),
-    latitude float,
-    longitude float,
-    ar float,
-    carHoldCo int,
-    trtmntPrdlst varchar(150),
-    institutionNm varchar(100)
+    center_name varchar(100),
+    adrs varchar(120),
+    lat float,
+    long float,
+    area float,
+    car_hold int,
+    subject_treat varchar(150),
+    management_corp varchar(100)
 );
